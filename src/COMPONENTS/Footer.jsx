@@ -2,6 +2,7 @@ import { useContext } from "react";
 import { FaFacebookF, FaTwitter, FaInstagram } from "react-icons/fa";
 import { AuthContext } from "../Provider/AuthProvider";
 import { Link } from "react-router-dom";
+import footerLogo from "../../public/assets/favIcon.png";
 
 const Footer = () => {
   const { theme } = useContext(AuthContext);
@@ -11,6 +12,9 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-6">
         {/* Logo and About */}
         <div>
+          <div>
+            <img src={footerLogo} alt="" />
+          </div>
           <h2 className="text-3xl font-bold text-orange-500">Gauge Gamer</h2>
           <p className="mt-4 text-sm">
             Explore and share honest game reviews with our passionate community.

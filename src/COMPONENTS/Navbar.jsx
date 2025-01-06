@@ -3,6 +3,7 @@ import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../Provider/AuthProvider";
 import { BsToggleOn } from "react-icons/bs";
 import { BsToggleOff } from "react-icons/bs";
+import navLogo from "../../public/assets/favIcon.png";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -11,9 +12,14 @@ const Navbar = () => {
   return (
     <nav className={`bg-[#1C1C1C] text-white p-4 ${theme}`}>
       <div className="flex items-center justify-between">
-        {/* Website Name/Logo */}
         <Link to="/">
-          <h1 className="text-2xl font-bold text-orange-500">Gauge</h1>
+          <div className="flex items-center gap-2">
+            <div>
+              <img src={navLogo} alt="" />
+            </div>
+            {/* Website Name/Logo */}
+            <h1 className="text-2xl font-bold text-orange-500">Gauge</h1>
+          </div>
         </Link>
 
         {/* Desktop Navbar Links */}
